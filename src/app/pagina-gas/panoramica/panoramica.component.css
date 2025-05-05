@@ -1,0 +1,4 @@
+@import '@angular/material/prebuilt-themes/cyan-orange.css';
+.mat-body-1 {
+  color: var(--mdc-theme-primary);
+}

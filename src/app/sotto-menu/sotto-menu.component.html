@@ -1,0 +1,18 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="sotto-menu-container">
+      <div class="sotto-menu-links">
+        <a mat-button
+           *ngFor="let item of menuItems"
+           [routerLink]="item.route"
+           routerLinkActive #rla="routerLinkActive"
+           [color]="rla.isActive ? 'accent' : null"
+           matRipple>
+          {{item.label}}
+        </a>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
