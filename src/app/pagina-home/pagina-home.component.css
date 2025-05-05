@@ -1,0 +1,53 @@
+/*mat-card-image {
+  max-height: 100px;*/ /* Imposta l'altezza massima desiderata */
+  /*object-fit: cover;*/ /* Riempi lo spazio mantenendo le proporzioni */
+/*}*/
+
+mat-card-header {
+  justify-content: center; 
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+mat-card {
+  transition: box-shadow 0.3s ease-in-out;
+  max-width: 600px; /* Potrebbe essere meglio usare una percentuale qui */
+  cursor: pointer; /* Indica che la card è cliccabile */
+}
+
+/*  mat-card:hover {
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+  }*/
+
+mat-card-image {
+  max-height: 300px;
+  object-fit: cover;
+  cursor: pointer; 
+}
+
+.clickable-title {
+  cursor: pointer; /* Indica che il titolo è cliccabile */
+  text-align: center;
+}
+
+/* Stili per schermi piccoli  */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Impila le card verticalmente */
+  }
+
+  mat-card {
+    width: 100%; /* Fai in modo che le card occupino tutta la larghezza */
+    max-width: none !important; /* Rimuovi le max-width precedenti */
+  }
+
+  mat-card-image {
+    max-height: none;
+    height: auto;
+  }
+}

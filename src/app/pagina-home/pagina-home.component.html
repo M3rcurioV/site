@@ -1,1 +1,41 @@
-<p>pagina-home works!</p>
+<div class="card-container">
+  <mat-card style="flex: 2;"
+            [@cardElevationGas]="elevationGas"
+            (mouseenter)="elevationGas = 'hovered'"
+            (mouseleave)="elevationGas = 'initial'"
+            class="clickable-card"
+            routerLink="/gas">
+    <mat-card-header>
+      <mat-card-title class="clickable-title" color="primary">
+        Software per il Gas
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="assets/images/gplCard.jpg" alt="Software per il Gas" class="clickable-image">
+    <mat-card-content>
+      <p>{{ descrizioneBreveSoftwareGas }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button routerLink="/gas">Scopri di più</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card style="flex: 1;"
+            [@cardElevationLegacy]="elevationLegacy"
+            (mouseenter)="elevationLegacy = 'hovered'"
+            (mouseleave)="elevationLegacy = 'initial'"
+            class="clickable-card"
+            href="#">
+    <mat-card-header>
+      <mat-card-title class="clickable-title" color="accent">
+        Software Legacy
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="assets/images/softwareCard.jpg" alt="Software Legacy" class="clickable-image">
+    <mat-card-content>
+      <p>{{ descrizioneBreveSoftwareLegacy }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Guarda l'elenco</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

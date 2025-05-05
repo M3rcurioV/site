@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
+
 @Component({
   selector: 'app-panoramica',
   standalone: true,
@@ -12,7 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './panoramica.component.css'
 })
 export class PanoramicaGasComponent {
-  immaginePrincipaleSoftware = 'assets/images/software-gestionale-gas.png';
+  immaginePrincipaleSoftware = 'assets/images/gplCard.png';
   descrizioneBreveSoftware = 'Il nostro software gestionale è progettato specificamente per le aziende del settore gas, offrendo strumenti avanzati per ottimizzare operazioni, gestire risorse e migliorare l\'efficienza.';
   funzionalitaSalienti = [
     { nome: 'Gestione Clienti', link: '/gas/funzionalita#clienti' },

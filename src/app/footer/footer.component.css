@@ -1,0 +1,50 @@
+.app-footer {
+  padding: 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-around; /* Distribuisce lo spazio tra le due sezioni */
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px; /* Spazio tra la parte superiore e il copyright */
+}
+
+.company-info {
+  text-align: left;
+  flex: 1; /* Occupa una parte dello spazio disponibile */
+  margin-right: 20px; /* Spazio tra le colonne */
+}
+
+.logo {
+  max-height: 50px;
+  margin-bottom: 10px;
+}
+
+.company-details {
+  margin-top: 0;
+  font-size: small;
+  text-align: left;
+}
+
+.contact-us {
+  text-align: left;
+  flex: 1; /* Occupa una parte dello spazio disponibile */
+}
+
+  .contact-us h3 {
+    margin-top: 0;
+  }
+
+.copyright {
+  text-align: center; /* Il copyright lo centro in basso */
+  padding-top: 10px;
+  border-top: 1px solid #eee; /* Una linea sottile per separare */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mat-icon {
+  margin-right: 8px;
+}
