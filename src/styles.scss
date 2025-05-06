@@ -2,7 +2,8 @@
 /*
 
 /* @import '@angular/material/prebuilt-themes/cyan-orange.css';*/
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+/*@import '@angular/material/prebuilt-themes/indigo-pink.css';*/
+
 /*@import '@angular/material/prebuilt-themes/deeppurple-amber.css';*/
 /**/
 /*@import '@angular/material/prebuilt-themes/azure-blue.css';*/
@@ -13,3 +14,39 @@
 
 /*html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
+/*@use '@angular/material' as mat;
+@include mat.core();*/
+
+/*@import '@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+/*@import '@angular/material/prebuilt-themes/indigo-pink.css';*/
+
+/* @import '@angular/material/prebuilt-themes/cyan-orange.css';*/
+
+/*@use '@angular/material' as mat;
+
+html {
+  color-scheme: light dark;
+  @include mat.theme(( color: mat.$violet-palette, typography: Roboto, density: 0 ));
+}
+
+body {
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}*/
+
+@use '@angular/material' as mat;
+
+$my-theme: mat.define-theme(( color: ( primary: mat.$indigo-palette, accent: mat.$pink-palette, warn: mat.$red-palette, theme-type: light, ), typography: mat.define-typography-config(), density: 0, ));
+
+@include mat.all-component-themes($my-theme);
+
+
+
+/**/
+/*Stili per la mappa*/
+/**/
+@import 'leaflet/dist/leaflet.css';
+@import 'leaflet.markercluster/dist/MarkerCluster.css';
+@import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';

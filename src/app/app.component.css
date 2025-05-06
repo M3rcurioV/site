@@ -1,0 +1,22 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Assicura che il contenitore occupi almeno l'altezza della viewport */
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+  flex-grow: 1; /* Fa crescere il contenuto principale per occupare lo spazio disponibile */
+  overflow-x: hidden; 
+  padding-bottom: 10px;
+  background:blue;
+}
+
+app-footer {
+/*  position: fixed;*/
+  left: 0;
+  width: 100%;
+/*  background:red;*/
+  z-index: 10; /* Assicura che sia sopra il contenuto animato */
+}

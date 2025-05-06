@@ -14,7 +14,12 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './mappa-referenze.component.html',
-  styleUrls: ['./mappa-referenze.component.css']
+  styleUrls: [
+    './mappa-referenze.component.css',
+    //'../../../../node_modules/leaflet/dist/leaflet.css',
+    //'../../../../node_modules/leaflet.markercluster/dist/MarkerCluster.css',
+    //'../../../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css',
+  ]
 })
 export class MappaReferenzeGasComponent implements OnInit {
   private map!: L.Map;
@@ -39,9 +44,9 @@ export class MappaReferenzeGasComponent implements OnInit {
 
   ngOnInit(): void {
     L.Icon.Default.mergeOptions({
-      iconRetinaUrl: 'assets/images/leaflet/marker-icon-2x.png',
-      iconUrl: 'assets/images/leaflet/marker-icon.png',
-      shadowUrl: 'assets/images/leaflet/marker-shadow.png'
+      //iconRetinaUrl: 'assets/images/leaflet/marker-icon-2x.png',
+      //iconUrl: 'assets/images/leaflet/marker-icon.png',
+      shadowUrl: 'images/leaflet/marker-shadow.png'
     });
     this.initMap();
     this.loadClienti();

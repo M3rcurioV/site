@@ -11,13 +11,14 @@ import { ApplicazioniGasComponent } from './pagina-gas/applicazioni/applicazioni
 import { MappaReferenzeGasComponent } from './pagina-gas/mappa-referenze/mappa-referenze.component';
 
 export const routes: Routes = [
-  { path: 'Home', component: PaginaHomeComponent },
+  { path: 'Home', component: PaginaHomeComponent , data: { animation: 'HomePage' } },
   { path: 'chi-siamo', component: PaginaChiSiamoComponent },
   { path: 'contatti', component: PaginaContattiComponent },
   { path: 'prodotti', component: PaginaProdottiComponent },
   {
     path: 'gas',
     component: PaginaGasComponent,
+    data: { animation: 'GasPage' },
     children: [
       { path: 'panoramica', component: PanoramicaGasComponent },
       { path: 'caratteristiche', component: CaratteristicheGasComponent },
