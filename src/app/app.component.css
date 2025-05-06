@@ -10,7 +10,6 @@
   flex-grow: 1; /* Fa crescere il contenuto principale per occupare lo spazio disponibile */
   overflow-x: hidden; 
   padding-bottom: 10px;
-  background:blue;
 }
 
 app-footer {

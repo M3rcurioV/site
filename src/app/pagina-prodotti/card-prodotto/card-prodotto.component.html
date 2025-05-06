@@ -1,0 +1,12 @@
+<mat-card [@hoverEffect]="hovered ? 'hovered' : 'default'"
+          (mouseenter)="hovered = true"
+          (mouseleave)="hovered = false">
+  <mat-card-header>
+    <mat-card-title>{{ titolo }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="immagine" alt="{{ titolo }}">
+  <mat-card-content>
+    <p>{{ descrizione }}</p>
+  </mat-card-content>
+</mat-card>
+aaaaa

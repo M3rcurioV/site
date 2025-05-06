@@ -1,0 +1,46 @@
+[
+  //gruppoA
+  {
+    "titolo": "Stabilimenti GPL",
+    "immagine": "assets/img/prodotto-a.jpg",
+    "descrizione": "Descrizione breve",
+    "gruppo": "gruppoA"
+  },
+  {
+    "titolo": "Manutenzione attrezzature",
+    "immagine": "assets/img/prodotto-a.jpg",
+    "descrizione": "Descrizione breve ",
+    "gruppo": "gruppoA"
+  },
+  {
+    "titolo": "Rilevazione presenze",
+    "immagine": "assets/img/prodotto-a.jpg",
+    "descrizione": "Descrizione breve",
+    "gruppo": "gruppoA"
+  },
+  //gruppoB
+  {
+    "titolo": "Negozi Abbigliamento",
+    "immagine": "assets/img/prodotto-b.jpg",
+    "descrizione": "Descrizione breve del Prodotto B.",
+    "gruppo": "gruppoB"
+  },
+  {
+    "titolo": "Gioiellerie",
+    "immagine": "assets/img/prodotto-b.jpg",
+    "descrizione": "Descrizione breve del Prodotto B.",
+    "gruppo": "gruppoB"
+  },
+  {
+    "titolo": "Grossisti Legnami",
+    "immagine": "assets/img/prodotto-b.jpg",
+    "descrizione": "Descrizione breve del Prodotto B.",
+    "gruppo": "gruppoB"
+  },
+  {
+    "titolo": "Grossisti surgelati",
+    "immagine": "assets/img/prodotto-b.jpg",
+    "descrizione": "Descrizione breve del Prodotto B.",
+    "gruppo": "gruppoB"
+  }
+]

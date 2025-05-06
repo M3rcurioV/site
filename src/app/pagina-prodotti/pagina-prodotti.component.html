@@ -1,6 +1,26 @@
 <div class="pagina-prodotti-container">
   <app-sotto-menu [menuItems]="prodottiMenuItems"></app-sotto-menu>
   <div class="pagina-prodotti-content">
+
+
+
+    <div class="gruppo-prodotti gruppo-a">
+      <app-card-prodotto *ngFor="let prodotto of gruppoA"
+                         [titolo]="prodotto.titolo"
+                         [immagine]="prodotto.immagine"
+                         [descrizione]="prodotto.descrizione">
+      </app-card-prodotto>
+    </div>
+
+    <div class="gruppo-prodotti gruppo-b">
+      <app-card-prodotto *ngFor="let prodotto of gruppoB"
+                         [titolo]="prodotto.titolo"
+                         [immagine]="prodotto.immagine"
+                         [descrizione]="prodotto.descrizione">
+      </app-card-prodotto>
+    </div>
+    testo
+
     <router-outlet></router-outlet>
   </div>
 </div>
