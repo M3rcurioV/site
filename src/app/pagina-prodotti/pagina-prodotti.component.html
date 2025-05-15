@@ -1,26 +1,56 @@
 <div class="pagina-prodotti-container">
-  <app-sotto-menu [menuItems]="prodottiMenuItems"></app-sotto-menu>
   <div class="pagina-prodotti-content">
+    <mat-card>
+      <mat-card-content>
+        <div class="introduzione">
+          <p>
+            Per offrire un'assistenza tecnica più rapida, competente e davvero orientata alle esigenze dei nostri clienti, nel 2022 abbiamo avviato una riorganizzazione interna.
+          </p>
+          <p>
+            I nostri reparti di sviluppo e assistenza sono stati suddivisi in due gruppi di lavoro specializzati.
+          </p>
+          <p>
+            Questa scelta strategica ci permette di fornire soluzioni più mirate, ridurre i tempi di intervento e garantire un elevato standard di qualità nei servizi erogati.
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
 
+    <div class="prodotti-wrapper">
+      <!-- Gruppo A -->
+      <mat-card class="gruppo-card gruppo-a-card">
+        <mat-card-header>
+          <mat-card-title class="card-title text-primary">Gruppo A: Settori Tecnici e Industriali</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="descrizione-gruppo">
+            <p><strong>Team specializzato</strong> nello sviluppo di soluzioni software per ambiti tecnici e industriali, tra cui spicca il settore <strong>GPL</strong>, seguito da manutenzione e rilevazione presenze.</p>
+            <p class="testo-secondario">L’esperienza consolidata nella gestione di impianti e processi ad alta criticità ci consente di offrire un supporto tecnico avanzato e soluzioni affidabili.</p>
+          </div>
+          <div class="gruppo-prodotti gruppo-a">
+            <app-card-prodotto *ngFor="let prodotto of gruppoA" [immagine]="prodotto.immagine" [routing]="prodotto.route"></app-card-prodotto>
+          </div>
+        </mat-card-content>
+      </mat-card>
 
-
-    <div class="gruppo-prodotti gruppo-a">
-      <app-card-prodotto *ngFor="let prodotto of gruppoA"
-                         [titolo]="prodotto.titolo"
-                         [immagine]="prodotto.immagine"
-                         [descrizione]="prodotto.descrizione">
-      </app-card-prodotto>
+      <!-- Gruppo B -->
+      <mat-card class="gruppo-card gruppo-b-card">
+        <mat-card-header>
+          <mat-card-title class="card-title text-primary">Gruppo B: Settori Commerciali e Retail</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="descrizione-gruppo">
+            <p><strong>Team dedicato</strong> allo sviluppo di soluzioni software per il settore commerciale e retail: abbigliamento, gioiellerie, grossisti di legnami e surgelati.</p>
+            <p class="testo-secondario">L’elevata conoscenza dei contesti applicativi consente di offrire strumenti digitali su misura, ottimizzando la gestione e favorendo l’efficienza aziendale.</p>
+          </div>
+          <div class="gruppo-prodotti gruppo-b">
+            <app-card-prodotto *ngFor="let prodotto of gruppoB" [immagine]="prodotto.immagine" [titolo]="prodotto.titolo" [routing]="prodotto.route"></app-card-prodotto>
+          </div>
+        </mat-card-content>
+      </mat-card>
     </div>
-
-    <div class="gruppo-prodotti gruppo-b">
-      <app-card-prodotto *ngFor="let prodotto of gruppoB"
-                         [titolo]="prodotto.titolo"
-                         [immagine]="prodotto.immagine"
-                         [descrizione]="prodotto.descrizione">
-      </app-card-prodotto>
-    </div>
-    testo
 
     <router-outlet></router-outlet>
   </div>
 </div>
+

@@ -1,22 +1,45 @@
-<mat-toolbar color="primary">
-  <img src="assets/images/logoAzienda.jpg" alt="Informatic Assistance" class="logo">
-  <span class="spacer"></span>
+<!--<mat-toolbar class="menuStyle">
   <button mat-button routerLink="/Home" routerLinkActive #rlaHome="routerLinkActive" [color]="rlaHome.isActive ? 'accent' : null" [class.active-link]="rlaHome.isActive">Home</button>
   <button mat-button routerLink="/prodotti" routerLinkActive #rlaProdotti="routerLinkActive" [color]="rlaProdotti.isActive ? 'accent' : null" [class.active-link]="rlaProdotti.isActive">Prodotti</button>
-  <!--<div class="products-menu-container">
-    <button mat-button [matMenuTriggerFor]="productsMenu" routerLinkActive #rlaProdotti="routerLinkActive" [class.active-link]="rlaProdotti.isActive">Prodotti</button>
-    <div class="sotto-menu-container">
-      <mat-menu #productsMenu="matMenu">
-    <button mat-menu-item
-            *ngFor="let prodotto of prodotti"
-            [routerLink]="prodotto.route"
-            routerLinkActive #rlaProdotto="routerLinkActive"
-            [class.active-menu-item]="rlaProdotto.isActive">
-      {{ prodotto.name }}
-    </button>
-  </mat-menu>
-    </div>
-  </div>-->
   <button mat-button routerLink="/chi-siamo" routerLinkActive #rlaChiSiamo="routerLinkActive" [color]="rlaChiSiamo.isActive ? 'accent' : null" [class.active-link]="rlaChiSiamo.isActive">Chi Siamo</button>
   <button mat-button routerLink="/contatti" routerLinkActive #rlaContatti="routerLinkActive" [color]="rlaContatti.isActive ? 'accent' : null" [class.active-link]="rlaContatti.isActive">Contatti</button>
+</mat-toolbar>-->
+
+<mat-toolbar class="menuStyle">
+  <!-- MENU DESKTOP -->
+  <div class="menu-desktop">
+    <button mat-button routerLink="/Home" routerLinkActive #rlaHome="routerLinkActive"
+            [color]="rlaHome.isActive ? 'accent' : null"
+            [class.active-link]="rlaHome.isActive">
+      Home
+    </button>
+    <button mat-button routerLink="/prodotti" routerLinkActive #rlaProdotti="routerLinkActive"
+            [color]="rlaProdotti.isActive ? 'accent' : null"
+            [class.active-link]="rlaProdotti.isActive">
+      Prodotti
+    </button>
+    <button mat-button routerLink="/chi-siamo" routerLinkActive #rlaChiSiamo="routerLinkActive"
+            [color]="rlaChiSiamo.isActive ? 'accent' : null"
+            [class.active-link]="rlaChiSiamo.isActive">
+      Chi Siamo
+    </button>
+    <button mat-button routerLink="/contatti" routerLinkActive #rlaContatti="routerLinkActive"
+            [color]="rlaContatti.isActive ? 'accent' : null"
+            [class.active-link]="rlaContatti.isActive">
+      Contatti
+    </button>
+  </div>
+
+  <!-- MENU MOBILE (hamburger) -->
+  <div class="menu-mobile">
+    <button mat-icon-button [matMenuTriggerFor]="mobileMenu" aria-label="Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #mobileMenu="matMenu">
+      <button mat-menu-item routerLink="/Home">Home</button>
+      <button mat-menu-item routerLink="/prodotti">Prodotti</button>
+      <button mat-menu-item routerLink="/chi-siamo">Chi Siamo</button>
+      <button mat-menu-item routerLink="/contatti">Contatti</button>
+    </mat-menu>
+  </div>
 </mat-toolbar>

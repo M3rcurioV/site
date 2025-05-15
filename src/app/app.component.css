@@ -2,15 +2,38 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Assicura che il contenitore occupi almeno l'altezza della viewport */
+  position: relative;
+  z-index: 1;
 }
 
+  .app-container::before {
+    content: '';
+    position: fixed;
+    top: 30em;
+    left:60em;
+    width: 75%;
+    height: 100%;
+    background: url('/nuovo25/assets/images/logoAzienda.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.2;
+    pointer-events: none; /*per non interferire con click o interazioni */
+    z-index: 0;
+    transform: translate(-50%, -50%) rotate(-30deg);
+  }
+
 .main-content {
-  position: relative;
+ /* position: relative;*/
   width: 100%;
   flex-grow: 1; /* Fa crescere il contenuto principale per occupare lo spazio disponibile */
-  overflow-x: hidden; 
+  overflow-x: hidden;
   padding-bottom: 10px;
 }
+
+.animation-wrapper {
+  position: relative;
+  min-height: 85vh;
+}
+
 
 app-footer {
 /*  position: fixed;*/
@@ -19,3 +42,5 @@ app-footer {
 /*  background:red;*/
   z-index: 10; /* Assicura che sia sopra il contenuto animato */
 }
+
+

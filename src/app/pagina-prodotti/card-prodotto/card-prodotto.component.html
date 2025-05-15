@@ -1,12 +1,10 @@
-<mat-card [@hoverEffect]="hovered ? 'hovered' : 'default'"
+<mat-card [routerLink]="routing"
+          [@hoverEffect]="hovered ? 'hovered' : 'default'"
           (mouseenter)="hovered = true"
-          (mouseleave)="hovered = false">
-  <mat-card-header>
-    <mat-card-title>{{ titolo }}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image [src]="immagine" alt="{{ titolo }}">
-  <mat-card-content>
-    <p>{{ descrizione }}</p>
-  </mat-card-content>
+          (mouseleave)="hovered = false" class="cardStyle">
+  <img mat-card-image [src]="immagine" alt="{{ titolo }}" class="prodotto-image">
+  
 </mat-card>
-aaaaa
+
+
+

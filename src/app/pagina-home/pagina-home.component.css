@@ -1,53 +1,128 @@
-/*mat-card-image {
-  max-height: 100px;*/ /* Imposta l'altezza massima desiderata */
-  /*object-fit: cover;*/ /* Riempi lo spazio mantenendo le proporzioni */
-/*}*/
+/* --- SEZIONE HERO --- */
+.hero {
+  display: flex;
+  flex-wrap: wrap; /* per andare a capo su schermi piccoli */
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* larghezza massima */
+  margin: 10px auto; /* centrato orizzontalmente */
+  padding: 20px;
+  gap: 32px; /* spazio tra testo e immagine */
+}
 
-mat-card-header {
-  justify-content: center; 
+.hero-content {
+  flex: 1 1 400px; /* si espande fino a un minimo di 400px */
+  text-align: start;
+}
+
+.hero-image {
+  flex: 0 0 auto; /* dimensione fissa */
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-content ul {
+  padding-left: 20px;
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.hero-content li {
+  margin-bottom: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+  .button-wrapper button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+
+    .button-wrapper button:hover {
+      transform: scale(1.05);
+    }
+
+
+/* --- SEZIONE SERVIZI --- */
+.services {
+  max-width: 1200px; /* stessa larghezza della hero */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
 .card-container {
   display: flex;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 20px auto;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
-mat-card {
-  transition: box-shadow 0.3s ease-in-out;
-  max-width: 600px; /* Potrebbe essere meglio usare una percentuale qui */
-  cursor: pointer; /* Indica che la card è cliccabile */
+.service-card {
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/*  mat-card:hover {
-    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
-  }*/
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
 
-mat-card-image {
-  max-height: 300px;
-  object-fit: cover;
-  cursor: pointer; 
+  .service-card img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+mat-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.clickable-title {
-  cursor: pointer; /* Indica che il titolo è cliccabile */
-  text-align: center;
+mat-card-content p {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
-/* Stili per schermi piccoli  */
+mat-card-content small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-  .card-container {
-    flex-direction: column; /* Impila le card verticalmente */
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
 
-  mat-card {
-    width: 100%; /* Fai in modo che le card occupino tutta la larghezza */
-    max-width: none !important; /* Rimuovi le max-width precedenti */
+  .hero-content,
+  .hero-image {
+    flex: 1 1 100%;
   }
 
-  mat-card-image {
-    max-height: none;
-    height: auto;
+  .button-wrapper {
+    justify-content: center;
+  }
+
+  .hero-content ul {
+    padding-left: 0;
   }
 }

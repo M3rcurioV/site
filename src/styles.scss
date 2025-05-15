@@ -1,15 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-/*
+/**/
 
 /*@import '@angular/material/prebuilt-themes/cyan-orange.css';*/
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+/*/*@import '@angular/material/prebuilt-themes/indigo-pink.css';*/
 
 /*@import '@angular/material/prebuilt-themes/deeppurple-amber.css';*/
 
-/*@import '@angular/material/prebuilt-themes/azure-blue.css';*/
+@import '@angular/material/prebuilt-themes/azure-blue.css';
 /*@import '@angular/material/prebuilt-themes/purple-green.css';*/
 /*@import '@angular/material/prebuilt-themes/deeppurple-amber.css';*/
-
 
 
 
@@ -21,3 +20,20 @@
 @import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+:root {
+  --color-primary: #007FFF;
+  --color-secondary: #4A5A6A;
+  --color-accent: #FFA94D;
+  --color-bg-light: #c8e1fa;
+  --color-bg-dark: #002B45;
+  --color-success: #3DBE8B;
+  --color-error: #FF5F57;
+  --color-A: #d9f3fc;
+  --color-B: #d9fce1;
+}

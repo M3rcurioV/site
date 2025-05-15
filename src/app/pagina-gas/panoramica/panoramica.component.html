@@ -1,64 +1,56 @@
-<div class="panoramica-container">
-  <mat-card>
-    <img mat-card-image [src]="immaginePrincipaleSoftware" alt="Software Gestionale per il Gas">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title color="primary">
-          <h2 class="mat-title">Software Gestionale per il Gas</h2>
-        </mat-card-title>
-        <mat-card-subtitle color="secondary">
-          <p class="mat-subtitle-1">Il software gestionale progettato specificamente per la tua azienda del settore gas</p>
-        </mat-card-subtitle>
-        <img mat-card-sm-image>
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="mat-body-1">{{ descrizioneBreveSoftware  }}</p>
-      <button mat-flat-button color="primary">Bottone Primario</button>
-      <p mat-card-content>...</p>
-    </mat-card-content>
-  </mat-card>
+<div class="panoramica-layout">
+  <!-- Colonna sinistra: testo -->
+  <div class="panoramica-left">
+    <div class="panoramica-header">
+      <div class="panoramica-img">
+        <img src="assets/images/prodotti/thumb_INFOGAS.jpg" alt="INFO-GAS" />
+      </div>
+      <div class="panoramica-text">
+        <h2>
+          Il sistema <span class="highlight">INFOrmatizzato</span><br />
+          per la gestione del <br />
+          magazzino e della fatturazione<br />
+          <strong>GAS sfuso e in bombole</strong>
+        </h2>
+      </div>
+    </div>
 
-  <mat-card>
-    <mat-card-title class="mat-title">Funzionalità Salienti</mat-card-title>
-    <mat-card-content>
+    <div class="panoramica-content">
+      <p><strong>&#8220;INFO-GAS&#8221;</strong> permette di risolvere le problematiche gestionali di un magazzino che tratta la lavorazione del GPL: imbottigliamento, vendita dello sfuso, gestione dell&#8217;autotrazione, gestione dei condomini e quindi della fatturazione a contatore.</p>
+
+      <p>Il programma &#232; organizzato in moduli tra di loro interfacciabili aventi in comune degli archivi chiamati &#8220;<i>Archivi di base</i>&#8221; quali clienti, fornitori, modalit&#224; di pagamento, agenti, trasportatori, etc.</p>
+
+      <h3>- Bombole</h3>
+      <p>Il modulo permette la gestione delle fatture comprese le fasce sconto per cliente o per gruppo di clienti. Le fatture emesse determineranno automaticamente lo scarico del combustibile al magazzino ed aggiorneranno anche il parco bombole del cliente. L&#8217;emissione della fattura determiner&#224;, se richiesto, l&#8217;emissione di un DAS. Le fatture saranno trasferite in contabilit&#224; generale, se il modulo &#232; attivo, dove sar&#224; automaticamente attivato il partitario clienti. Le bombole riconsegnate dal cliente, potranno essere gestite in forma generica senza marchio (bombole proprie o di terzi) o per marchio e saranno inserite a magazzino in modo da scalare il parco bombole del cliente. Potranno essere gestite in automatico le note di credito a fronte delle fatture emesse, considerando i quantitativi acquistati, nel periodo richiesto, suddivisi anche per aliquota al 10% o al 20%. Il modulo permette l&#8217;inserimento delle cauzioni per singolo cliente. Crea la stampa per singolo cliente o riepilogativa delle cauzioni ancora attive, annullate o rimborsate scadenzate per data, nonch&#233; quella del parco bombole dei clienti analizzato insieme alle bombole cauzionate.</p>
+
+      <h3>- Serbatoi</h3>
+      <p>Catalogazione dei serbatoi dell&#8217;azienda per tipologia e capacit&#224;. Ogni serbatoio verr&#224; catalogato per matricola e ad esso saranno attribuite tutte le informazioni necessarie per la sua identificazione e per l'eventuale gestione di verifiche o collaudi. Sar&#224; possibile gestire la movimentazione e quindi oltre al pervenimento anche la consegna a cliente e l&#8217;eventuale ritiro. Tutte le informazioni inserite permetteranno di effettuare ricerche dei serbatoi per tipologia, per matricola o per cliente. Richiamando il cliente sar&#224; anche possibile conoscere i serbatoi in suo possesso.</p>
+
+      <h3>- Valvole</h3>
+      <p>E&#8217; possibile inserire le valvole ed ognuna verr&#224; identificata per matricola, scadenza, caratteristica, etc. Ogni valvola, se installata, sar&#224; legata ad un serbatoio e potr&#224; essere rintracciata sia dall&#8217;elenco dei serbatoi che dall&#8217;elenco delle valvole.</p>
+
+      <h3>- Sfuso</h3>
+      <p>Il modulo permette la gestione delle fatture in pre-vendita o in post-vendita con la possibilit&#224; di attribuire ad ogni singolo cliente uno sconto o una maggiorazione a litro. Le fatture emesse in litri determineranno automaticamente lo scarico del combustibile al magazzino in Kg, tramite un coefficiente di conversione gestito autonomamente dall&#8217;utente, e lo scarico del combustibile in litri nella scheda del cliente. Analisi per singolo cliente o per zona al fine di valutare i consumi periodici. Potranno essere analizzati tutti i clienti che non hanno acquistato da una determinata data. Tutte le stampe potranno essere parzializzate per agente, per zona, per data,ecc.</p>
+
+      <h3>- Condomini</h3>
+      <p>Il modulo consente l&#8217;inserimento degli utenti suddivisi per zona, condominio, e tipologia contratto (per la definizione dei prezzi). Potr&#224; essere gestita, con la periodicit&#224; che si desidera, la fatturazione con l&#8217;emissione di bollettini di conto corrente. Tramite l'inserimento delle letture potranno essere stampati i tabulati per la verifica delle eventuali anomalie (consumi eccessivi, letture non effettuate, etc...). Emettendo il bollettino verr&#224; automaticamente scaricato il magazzino del condominio (deposito satellite) del totale metri cubi fatturati convertiti in automatico tramite coefficiente di conversione in Kg. Questo modulo prevede anche la contabilit&#224; degli utenti gestendo:</p>
+
       <ul>
-        <li *ngFor="let funzionalita of funzionalitaSalienti">
-          <a mat-button [routerLink]="funzionalita.link">{{ funzionalita.nome }}</a>
-        </li>
+        <li>l&#8217;inserimento degli incassi</li>
+        <li>lettera di sollecito a cliente per pagamenti non effettuati</li>
+        <li>calcolo della mora per pagamenti effettuati in ritardo</li>
+        <li>avvisi sul bollettino di conto corrente per pagamenti non ancora effettuati</li>
       </ul>
-      <p class="mat-body-1">Scopri tutte le funzionalità nella pagina <a mat-button routerLink="/gas/funzionalita">Funzionalità</a>.</p>
-    </mat-card-content>
-  </mat-card>
+
+      <p>Sul bollettino di conto corrente, potr&#224; essere stampato un codice a barre per l'identificazione del documento al fine di velocizzare e rendere totalmente sicuri i pagamenti attraverso lettore. Potr&#224; essere effettuata una fatturazione forfettaria, quindi senza registrazione dei consumi, utilizzando come criteri di consumo o una media di letture di un periodo definito o il corrispondente periodo dell&#8217;anno precedente.</p>
+
+      <h3>- Tentata Vendita</h3>
+      <p>E&#8217; possibile gestire la fatturazione in tentata vendita anche tramite terminali portatili. In funzione del tipo di terminale possono essere abilitate alcune o tutte le funzioni della procedura. Il terminale potr&#224; indifferentemente essere utilizzato sia per la tentata vendita dello sfuso che per la tentata vendita di bombole. Gli operatori addetti alla fatturazione non potranno in alcun modo modificare i prezzi delle bombole o dello sfuso perch&#233; gi&#224; attribuiti in sede per ogni singolo cliente, per fascia, per zona, etc... Se utilizzato per la tentata vendita di bombole in ogni fattura potr&#224; essere inserita la quantit&#224; di bombole rese dal cliente suddivise per peso. Le fatture registrate saranno automaticamente trasferite alla sede con una immediata gestione del magazzino, dei clienti, del parco bombole e della contabilit&#224;.</p>
+    </div>
+  </div>
+
+  <!-- Colonna destra: mappa -->
+  <div class="panoramica-right">
+    <app-mappa-referenze></app-mappa-referenze>
+  </div>
 </div>
-<br>
-<br>
-<mat-card>
-  <mat-card-title color="primary">Titolo della Card</mat-card-title>
-  <mat-card-subtitle>Sottotitolo</mat-card-subtitle>
-  <mat-card-content>
-    <p>Questo è un semplice contenuto all'interno della card.</p>
-  </mat-card-content>
-</mat-card>
-
-<button mat-raised-button color="accent">Bottone Accent</button>
-
-<!--<mat-card class="example-card" appearance="outlined">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>-->

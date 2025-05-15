@@ -1,6 +1,7 @@
 .pagina-gas-container {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .pagina-gas-content {

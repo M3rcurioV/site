@@ -1,0 +1,153 @@
+:host {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pagina-prodotti-content {
+  display: grid;
+  gap: 24px;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.introduzione {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: left; /* testo allineato a sinistra */
+  color: #222;
+  /* Centratura visiva */
+  /*max-width: 720px;*/ /* limita larghezza testo per una lettura più comoda */
+/*  margin-left: 10%;
+  margin-right: auto;*/
+}
+
+.prodotti-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.gruppo-card {
+  flex: 1;
+  width: 100%;
+}
+
+.gruppo-a-card {
+  background: var(--color-A);
+}
+
+.gruppo-b-card {
+  background: var(--color-B);
+}
+
+.card-title {
+  text-align: center;
+}
+
+.descrizione-gruppo {
+  padding: 0 16px 12px 16px;
+  line-height: 1.5;
+}
+
+  .descrizione-gruppo p {
+    margin: 0.5rem 0;
+  }
+
+.gruppo-prodotti {
+  display: grid;
+  gap: 16px;
+}
+
+.gruppo-a {
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+.gruppo-b {
+  grid-template-columns: repeat(auto-fill, minmax(13em, 1fr));
+}
+
+@media (max-width: 1023px) {
+  .prodotti-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .gruppo-card {
+    flex: 1 1 100%;
+  }
+
+  .gruppo-prodotti {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .pagina-prodotti-container,
+  .pagina-prodotti-content,
+  .prodotti-wrapper,
+  .gruppo-card,
+  .gruppo-prodotti {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .pagina-prodotti-content {
+    margin: 0; /* togli margini per mobile */
+  }
+
+  .gruppo-prodotti {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .introduzione,
+  .descrizione-gruppo {
+    padding: 0 16px;
+    font-size: 1rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* rimuoviamo max-width per mobile per usare tutta la larghezza */
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  app-card-prodotto {
+    width: 100%;
+  }
+
+  .pagina-prodotti-container {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  app-card-prodotto img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gruppo-card mat-card-content {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box;
+  }
+
+  app-card-prodotto {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+}
+

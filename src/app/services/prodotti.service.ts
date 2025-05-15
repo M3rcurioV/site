@@ -7,6 +7,7 @@ export interface Prodotto {
   immagine: string;
   descrizione: string;
   gruppo: 'gruppoA' | 'gruppoB';
+  route: string;
 }
 
 @Injectable({

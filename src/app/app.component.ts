@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
+import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component'
 import { trigger, transition, style, animate, query, group } from '@angular/animations';
 
@@ -9,7 +9,7 @@ import { trigger, transition, style, animate, query, group } from '@angular/anim
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,RouterOutlet, MenuComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [
@@ -18,10 +18,14 @@ import { trigger, transition, style, animate, query, group } from '@angular/anim
         //style({ backgroundColor: 'red' }),
         //animate('2000ms ease', style({ backgroundColor: 'blue' }))
         query(':enter, :leave',
-          style({ position: 'absolute', left: 0, width: '100%', opacity: 0 }),
+          style({
+            position: 'absolute',
+            left: 0,
+            width: '100%',
+            opacity: 0
+          }),
           { optional: true }),
         query(':enter', style({ transform: 'translateX(100%)', opacity: 0 }), { optional: true }),
-
         group([
           query(':leave', animate('1000ms ease', style({ transform: 'translateX(-100%)', opacity: 0 })), { optional: true }),
           query(':enter', animate('1000ms ease', style({ transform: 'translateX(0%)', opacity: 1 })), { optional: true }),

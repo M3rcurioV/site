@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Cliente } from '../models/cliente.model'; 
 import { environment } from '../../environments/environment';
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root' //lo rende disponibile a tutta l'app
@@ -13,6 +14,10 @@ export class ClienteService {
   constructor(private http: HttpClient) { }
 
   getClienti(): Observable<Cliente[]> {
-    return this.http.get<Cliente[]>(this.apiUrl);
+    const headers = new HttpHeaders({
+      'Accept': 'application/json'
+    });
+
+    return this.http.get<Cliente[]>(this.apiUrl, { headers });
   }
 }

@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'SitoBackEnd' 
+  apiUrl: 'SitoBackEnd',
+  baseHref: '/nuovo25/'
 };

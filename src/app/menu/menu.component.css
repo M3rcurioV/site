@@ -1,8 +1,40 @@
-.logo {
-  margin-right: 20px;
-  max-height: 40px;
+/*.menuStyle {*/
+  /*  background: var(--color-bg-light);*/
+  /*border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.5);*/ 
+/*  backdrop-filter: blur(4px); */ 
+  /*-webkit-backdrop-filter: blur(4px);
+}*/
+
+.menuStyle {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  height: 56px;
 }
 
-.spacer {
-  flex: 1 1 auto;
+.menu-desktop {
+  display: flex;
+  gap: 12px;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+/* Responsive: nasconde desktop menu e mostra hamburger */
+@media (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
 }

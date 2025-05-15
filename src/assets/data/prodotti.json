@@ -1,46 +1,51 @@
 [
-  //gruppoA
   {
     "titolo": "Stabilimenti GPL",
-    "immagine": "assets/img/prodotto-a.jpg",
-    "descrizione": "Descrizione breve",
-    "gruppo": "gruppoA"
+    "immagine": "assets/images/prodotti/cardGpl.jpg",
+    "descrizione": "<p>Gestione completa degli impianti di stoccaggio e distribuzione GPL, con strumenti dedicati al controllo, alla sicurezza e all'efficienza operativa.</p><ul><li>Monitoraggio serbatoi e valvole</li><li>Gestione Condomini</li><li>Tracciabilità delle operazioni</li><li>…per una gestione completa a 360°</li></ul>",
+    "gruppo": "gruppoA",
+    "route": "/gas/panoramica"
   },
   {
     "titolo": "Manutenzione attrezzature",
-    "immagine": "assets/img/prodotto-a.jpg",
-    "descrizione": "Descrizione breve ",
-    "gruppo": "gruppoA"
+    "immagine": "assets/images/prodotti/cardManutenzione.jpg",
+    "descrizione": "<p>Gestione efficace e centralizzata delle manutenzioni ordinarie e straordinarie per attrezzature e impianti, con pieno controllo dei cicli operativi.</p><ul><li>Programmazione e scadenze interventi</li><li>Storico attività e ricambi utilizzati</li><li>Gestione squadre interne ed esterne</li><li>…e tante altre funzioni per semplificare il lavoro</li></ul>",
+    "gruppo": "gruppoA",
+    "route": "/manutenzione"
   },
   {
     "titolo": "Rilevazione presenze",
-    "immagine": "assets/img/prodotto-a.jpg",
-    "descrizione": "Descrizione breve",
-    "gruppo": "gruppoA"
+    "immagine": "assets/images/prodotti/cardRilevazionePresenze.jpg",
+    "descrizione": "<p>Controllo preciso delle presenze, accessi e orari di lavoro del personale, integrabile con sistemi di badge o biometrici.</p><ul><li>Timbrature automatizzate e manuali</li><li>Report presenze e straordinari</li><li>Gestione permessi, ferie e turnazioni</li><li>…e tutto ciò che serve per una gestione puntuale</li></ul>",
+    "gruppo": "gruppoA",
+    "route": "/rilevazione-presenze"
   },
-  //gruppoB
   {
     "titolo": "Negozi Abbigliamento",
-    "immagine": "assets/img/prodotto-b.jpg",
-    "descrizione": "Descrizione breve del Prodotto B.",
-    "gruppo": "gruppoB"
+    "immagine": "assets/images/prodotti/cardAbbigliamento.jpg",
+    "descrizione": "<p>Software pensato per la gestione completa dei punti vendita nel settore moda: magazzino, vendite e clienti in un'unica soluzione.</p><ul><li>Gestione taglie e colori</li><li>Tracciabilità articoli e resi</li><li>Statistiche di vendita in tempo reale</li><li>…e strumenti per fidelizzare la clientela</li></ul>",
+    "gruppo": "gruppoB",
+    "route": "/abbigliamento"
   },
   {
     "titolo": "Gioiellerie",
-    "immagine": "assets/img/prodotto-b.jpg",
-    "descrizione": "Descrizione breve del Prodotto B.",
-    "gruppo": "gruppoB"
+    "immagine": "assets/images/prodotti/cardGioiellerie.jpg",
+    "descrizione": "<p>Un gestionale specifico per gioiellerie, che unisce precisione inventariale e funzionalità per la vendita di articoli di valore.</p><ul><li>Catalogazione con immagini e certificazioni</li><li>Gestione carati, pietre e metalli</li><li>Tracciabilità completa degli articoli</li><li>…e strumenti per vendere in sicurezza</li></ul>",
+    "gruppo": "gruppoB",
+    "route": "/gioiellerie"
   },
   {
     "titolo": "Grossisti Legnami",
-    "immagine": "assets/img/prodotto-b.jpg",
-    "descrizione": "Descrizione breve del Prodotto B.",
-    "gruppo": "gruppoB"
+    "immagine": "assets/images/prodotti/cardLegnami.jpg",
+    "descrizione": "<p>Soluzione gestionale per aziende di commercio legnami, con supporto per la gestione di materiali grezzi, semilavorati e trattati.</p><ul><li>Gestione misure, qualità e lotti</li><li>Tracciabilità carichi e ordini</li><li>Gestione magazzini e trasporti</li><li>…e molte funzioni specifiche per il settore legno</li></ul>",
+    "gruppo": "gruppoB",
+    "route": "/legnami"
   },
   {
     "titolo": "Grossisti surgelati",
-    "immagine": "assets/img/prodotto-b.jpg",
-    "descrizione": "Descrizione breve del Prodotto B.",
-    "gruppo": "gruppoB"
+    "immagine": "assets/images/prodotti/cardSurgelati.jpg",
+    "descrizione": "<p>Gestione dedicata alle aziende che distribuiscono prodotti surgelati, con strumenti per controllo temperature e logistica refrigerata.</p><ul><li>Catalogo con date scadenza e lotti</li><li>Monitoraggio stock e rotazione merci</li><li>Tracciabilità spedizioni e ritiri</li><li>…e funzioni per garantire qualità e conformità</li></ul>",
+    "gruppo": "gruppoB",
+    "route": "/surgelati"
   }
 ]

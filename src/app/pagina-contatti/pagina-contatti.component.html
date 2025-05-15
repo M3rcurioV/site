@@ -1,1 +1,40 @@
-<p>pagina-contatti works!</p>
+<div class="contatti-container">
+  <!-- Mappa a sinistra -->
+  <div class="mappa-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1383437472273!2d15.06343605458441!3d37.52823600839161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313fd3b8efa4aaf%3A0x806c24075c4fadc0!2sInformatic%20Assistance%20Di%20Pirrello%20Domenico%20E%20Co.%20Sas!5e0!3m2!1sit!2sit!4v1747130895548!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- Form a destra -->
+  <mat-card class="form-card">
+    <mat-card-title class="mb-2">Scrivici un messaggio</mat-card-title>
+    <form [formGroup]="contattiForm" (ngSubmit)="inviaMessaggio()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Messaggio</mat-label>
+        <textarea matInput formControlName="messaggio" rows="5"></textarea>
+      </mat-form-field>
+
+      <div class="form-footer">
+        <div class="g-recaptcha"
+             data-sitekey="6LfE4TcrAAAAACTdOaPSC4kVZAKvTFEzcshc0Yev"
+             id="captcha-container">
+        </div>
+        <button mat-raised-button
+                color="primary"
+                type="submit"
+                [disabled]="!contattiForm.valid || !captchaValid">
+          Invia
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>

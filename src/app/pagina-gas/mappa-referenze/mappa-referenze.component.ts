@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 //import 'leaflet.markercluster'; // Modulo per i marker cluster
 import * as L from 'leaflet'; // Importa il namespace completo (potrebbe includere riferimenti agli assets)
 import { default as DefL } from 'leaflet'; // Importa l'export default per accedere a markerClusterGroup
-import 'leaflet.markercluster';
+/*import 'leaflet.markercluster';*/  //Non serve più, non stiamo raggruppando più
 
 import { ClienteService } from '../../services/cliente.service';
 import { Cliente } from '../../models/cliente.model';
@@ -15,10 +15,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './mappa-referenze.component.html',
   styleUrls: [
-    './mappa-referenze.component.css',
-    //'../../../../node_modules/leaflet/dist/leaflet.css',
-    //'../../../../node_modules/leaflet.markercluster/dist/MarkerCluster.css',
-    //'../../../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css',
+    './mappa-referenze.component.css'
   ]
 })
 export class MappaReferenzeGasComponent implements OnInit {
@@ -44,24 +41,20 @@ export class MappaReferenzeGasComponent implements OnInit {
 
   ngOnInit(): void {
     L.Icon.Default.mergeOptions({
-      //iconRetinaUrl: 'assets/images/leaflet/marker-icon-2x.png',
-      //iconUrl: 'assets/images/leaflet/marker-icon.png',
-      shadowUrl: 'images/leaflet/marker-shadow.png'
+      iconRetinaUrl: 'assets/images/leaflet/marker-icon-2x.png',
+      iconUrl: 'assets/images/leaflet/marker-icon.png',
+      shadowUrl: 'assets/images/leaflet/marker-shadow.png'
     });
     this.initMap();
+    /*    this.loadClienti();*/
     this.loadClienti();
-    //this.clienti = [
-    //  { ID: "1", Nome: 'Test 1', Latitudine: 38.2, Longitudine: 15.5 },
-    //  { ID: "2", Nome: 'Test 2', Latitudine: 37.5, Longitudine: 14.0 }
-    //];
+    this.AggiungiMarkerAzienda();
   }
 
 
 
   private initMap(): void {
     this.map = L.map('map', {
-      //center: [41.8719, 12.5674], // Coordinate Roma
-      //zoom: 6, //zoom per visualizzare intera italia
       center: [39.2077255, 14.0900667],
       zoom: 6, //zoom necessario
     });
@@ -71,49 +64,48 @@ export class MappaReferenzeGasComponent implements OnInit {
       attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(this.map);
 
-    const aziendaMarker = this.creaMarkerAzienda();
-    aziendaMarker.addTo(this.map); // aggiungo il marker azienda
   }
 
   private loadClienti(): void {
     this.clienteService.getClienti().subscribe(clientiDalServer => {
       this.clienti = clientiDalServer;
-      const customerMarkers = this.creaMarkerClienti();
-      if (customerMarkers && this.map) {
-        this.map.addLayer(customerMarkers);
-      }
+      this.aggiungiMarkerClienti();
     });
   }
-
-  private creaMarkerClienti(): L.LayerGroup | undefined {
-    if (!this.map || this.clienti.length === 0) {
-      return undefined;
-    }
-
-    const markers = DefL.markerClusterGroup();
- 
+  private aggiungiMarkerClienti(): void {
     this.clienti.forEach(cliente => {
       const marker = L.marker([cliente.Latitudine, cliente.Longitudine]);
-      marker.bindPopup(`<b>${cliente.Nome}</b>`); 
-      markers.addLayer(marker);
+      marker.bindPopup(`<b>${cliente.Nome}</b>`);
+      marker.addTo(this.map);
     });
-    return markers;
   }
 
-  private creaMarkerAzienda(): L.Marker {
-    //const aziendaIconHtml = `
-    //  <div class="azienda-marker">
-    //    <i class="bi bi-building"></i>
-    //  </div>
-    //`;
+  //private loadClienti(): void {
+  //  this.clienteService.getClienti().subscribe(clientiDalServer => {
+  //    this.clienti = clientiDalServer;
+  //    const customerMarkers = this.creaMarkerClienti();
+  //    if (customerMarkers && this.map) {
+  //      this.map.addLayer(customerMarkers);
+  //    }
+  //  });
+  //}
 
-    //const aziendaIcon = L.divIcon({
-    //  className: 'azienda-marker-container',
-    //  html: aziendaIconHtml,
-    //  iconSize: [40, 40],
-    //  iconAnchor: [15, 30],
-    //  popupAnchor: [0, -30]
-    //});
+  //private creaMarkerClienti(): L.LayerGroup | undefined {
+  //  if (!this.map || this.clienti.length === 0) {
+  //    return undefined;
+  //  }
+
+  //  const markers = DefL.markerClusterGroup();
+ 
+  //  this.clienti.forEach(cliente => {
+  //    const marker = L.marker([cliente.Latitudine, cliente.Longitudine]);
+  //    marker.bindPopup(`<b>${cliente.Nome}</b>`); 
+  //    markers.addLayer(marker);
+  //  });
+  //  return markers;
+  //}
+
+  private AggiungiMarkerAzienda(): void {
 
     const logoUrl = 'assets/images/logoAziendaMappa.jpg'; 
 
@@ -125,6 +117,6 @@ export class MappaReferenzeGasComponent implements OnInit {
     });
     const marker = L.marker([this.Azienda.latitudine, this.Azienda.longitudine], { icon: aziendaIcon });
     marker.bindPopup(`<b>${this.Azienda.nome}</b>`);
-    return marker;
+    marker.addTo(this.map);
   }
 }

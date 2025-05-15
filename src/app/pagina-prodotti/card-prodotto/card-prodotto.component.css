@@ -1,0 +1,103 @@
+.cardStyle{
+/*    border-width:1px;
+    border-color:black;*/
+}
+  .cardStyle ::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+  }
+/*.card-title {
+  margin-bottom: 8px;
+  min-height: 3em;
+}
+
+.prodotto-card {
+  position: relative; 
+  overflow: hidden; 
+}
+
+.image-container {
+  position: relative; 
+}
+
+.prodotto-image {
+  width: 100%;*/
+  /*display: block;*/ /* Rimuove lo spazio extra sotto l'immagine */
+/*}*/
+
+/*.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;*/ /* Spinge il testo verso il basso */
+  /*align-items: flex-start;*/ /* Allinea il testo a sinistra */
+  /*padding: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}*/
+
+/*.prodotto-card:hover .text-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-content {
+  width: 100%; 
+}*/
+
+/*  .text-content mat-card-title {
+    margin-bottom: 8px;
+  }*/
+
+
+/*.cardStyle {
+  display: flex;
+  flex-direction: row-reverse;*/ /* Posiziona l'immagine a destra */
+  /*height: 50px;*/ /* Imposta l'altezza fissa per tutte le card */
+  /*border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+  .cardStyle img.mat-card-image {
+    width: 50px;*/ /* Imposta una larghezza fissa per l'immagine */
+    /*object-fit: cover;*/ /* Assicura che l'immagine copra l'area senza distorsioni */
+  /*}
+
+.mat-card-content {
+  flex: 1;*/ /* Permette al contenuto di occupare lo spazio rimanente */
+  /*padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;*/ /* Centra il testo verticalmente */
+/*}
+
+.cardStyle ::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}*/

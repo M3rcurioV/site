@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SottoMenuComponent, SottoMenuItem } from '../sotto-menu/sotto-menu.component';
 import { RouterOutlet } from '@angular/router';
+
+import { MatCardModule } from '@angular/material/card';
 
 import { ProdottiService, Prodotto } from '../services/prodotti.service';
 import { CardProdottoComponent } from './card-prodotto/card-prodotto.component';
@@ -11,10 +12,11 @@ import { CardProdottoComponent } from './card-prodotto/card-prodotto.component';
 @Component({
   selector: 'app-pagina-prodotti',
   standalone: true,
-  imports: [CommonModule, SottoMenuComponent, RouterOutlet, CardProdottoComponent],
+  imports: [CommonModule , RouterOutlet, CardProdottoComponent, MatCardModule],
   templateUrl: './pagina-prodotti.component.html',
   styleUrl: './pagina-prodotti.component.css',
   providers: [ProdottiService],
+  encapsulation: ViewEncapsulation.Emulated,
   //animations: [
   //  trigger('slideInLeft', [
   //    transition(':enter', [
@@ -31,33 +33,7 @@ import { CardProdottoComponent } from './card-prodotto/card-prodotto.component';
   //]
 })
 export class PaginaProdottiComponent implements OnInit {
-  prodottiMenuItems: SottoMenuItem[] = [
-    {
-      label: 'Gas', route: '/gas'
-    },
-    {
-      label: 'Abbigliamento', route: '/abbigliamento'
-    },
-    {
-      label: 'Magazzino', route: '/magazzino'
-    },
-    {
-      label: 'Legnami', route: '/magazzino'
-    },
-    {
-      label: 'Surgelati', route: '/magazzino'
-    },
-    {
-      label: 'Ottica', route: '/magazzino'
-    },
-    {
-      label: 'Rilevazione Presenze', route: '/magazzino'
-    },
-    {
-      label: 'Agenti Commercio', route: '/magazzino'
-    },
-    // altri elementi del sottomenu
-  ];
+  
   gruppoA: Prodotto[] = [];
   gruppoB: Prodotto[] = [];
 
