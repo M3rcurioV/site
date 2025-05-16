@@ -10,7 +10,6 @@ import { CardProdottoComponent } from './pagina-prodotti/card-prodotto/card-prod
 
   ],
   providers: [
-    {  }
   ],
   bootstrap: [AppComponent],
   declarations: [

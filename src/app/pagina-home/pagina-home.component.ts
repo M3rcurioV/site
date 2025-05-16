@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { SeoService } from '../services/seo.service'
 
 @Component({
   selector: 'app-pagina-home',
@@ -11,7 +12,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './pagina-home.component.html',
   styleUrl: './pagina-home.component.css',
 })
-export class PaginaHomeComponent {
+export class PaginaHomeComponent implements OnInit {
+  constructor(private seo: SeoService) { }
+
+  ngOnInit(): void {
+    this.seo.updateMeta('homepage');
+  }
+
+
   services = [
     {
       title: 'Distribuzione Software',

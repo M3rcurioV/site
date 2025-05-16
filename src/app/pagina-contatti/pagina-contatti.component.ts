@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component, AfterViewInit, ChangeDetectorRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,8 +10,9 @@ import { ContattiService } from '../services/contatti.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-declare var grecaptcha: any;
+import { SeoService } from '../services/seo.service'
 
+declare var grecaptcha: any;
 
 @Component({
   selector: 'app-pagina-contatti',
@@ -27,7 +28,7 @@ declare var grecaptcha: any;
   styleUrl: './pagina-contatti.component.css'
 })
 
-export class PaginaContattiComponent implements AfterViewInit {
+export class PaginaContattiComponent implements OnInit, AfterViewInit {
   contattiForm: FormGroup;
   captchaValid: boolean = false;
   captchaToken: string | null = null;
@@ -35,13 +36,18 @@ export class PaginaContattiComponent implements AfterViewInit {
     private fb: FormBuilder,
     private contattiService: ContattiService,
     private snackBar: MatSnackBar,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private seo: SeoService,
   ) {
     this.contattiForm = this.fb.group({
       nome: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       messaggio: ['', Validators.required]
     });
+  }
+
+  ngOnInit(): void {
+    this.seo.updateMeta('contatti');
   }
 
   ngAfterViewInit(): void {

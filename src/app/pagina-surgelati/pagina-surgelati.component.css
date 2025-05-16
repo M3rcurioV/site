@@ -1,3 +1,117 @@
-.pagina-surgelati-container {
-  background-color: white;
+.prodotto-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
 }
+
+mat-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+  mat-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+
+/* Header */
+.prodotto-header {
+  background: #e3f2fd;
+  padding: 2rem;
+}
+
+.prodotto-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.prodotto-img img {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.prodotto-title h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.prodotto-title .highlight {
+  color: var(--color-primary, #1976d2);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .prodotto-header-content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .prodotto-img {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .prodotto-title h2 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Sezioni */
+.prodotto-section {
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  background: #ffffff;
+}
+
+  .prodotto-section h3 {
+    margin-top: 0;
+    color: var(--color-primary, #1976d2);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .prodotto-section ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prodotto-section li {
+    margin-bottom: 0.5rem;
+    list-style: disc;
+  }
+
+  .prodotto-section p {
+    margin-bottom: 1rem;
+  }
+
+  .prodotto-section h5 {
+    color: #0056b3;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+.prodotto-sub-section {
+  margin-left: 1rem;
+}
+
+  .prodotto-sub-section p {
+    margin-left: 1rem;
+  }

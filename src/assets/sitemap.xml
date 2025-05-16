@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.informatic-assistance.it/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.informatic-assistance.it/Home</loc>
+  </url>
+
+  <url>
+    <loc>https://www.informatic-assistance.it/prodotti</loc>
+  </url>
+
+  <url>
+    <loc>https://www.informatic-assistance.it/chi-siamo</loc>
+  </url>
+
+  <url>
+    <loc>https://www.informatic-assistance.it/contatti</loc>
+  </url>
+
+  <!-- INFO-GAS -->
+  <url>
+    <loc>https://www.informatic-assistance.it/gas/panoramica</loc>
+  </url>
+
+  <!-- INFO-MANUTENGO -->
+  <url>
+    <loc>https://www.informatic-assistance.it/manutenzione</loc>
+  </url>
+
+  <!-- PRESENZE2000 -->
+  <url>
+    <loc>https://www.informatic-assistance.it/rilevazione-presenze</loc>
+  </url>
+
+  <!-- TAGLIE E COLORI -->
+  <url>
+    <loc>https://www.informatic-assistance.it/abbigliamento</loc>
+  </url>
+
+  <!-- GIANO -->
+  <url>
+    <loc>https://www.informatic-assistance.it/gioiellerie</loc>
+  </url>
+
+  <!-- INFO-LEGNO -->
+  <url>
+    <loc>https://www.informatic-assistance.it/legnami</loc>
+  </url>
+
+  <!-- INFO-SURGELATI -->
+  <url>
+    <loc>https://www.informatic-assistance.it/surgelati</loc>
+  </url>
+
+</urlset>

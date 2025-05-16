@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 
 import { ProdottiService, Prodotto } from '../services/prodotti.service';
 import { CardProdottoComponent } from './card-prodotto/card-prodotto.component';
+import { SeoService } from '../services/seo.service'
 //per animazione
 /*import { trigger, style, animate, transition } from '@angular/animations';*/
 
@@ -17,29 +18,21 @@ import { CardProdottoComponent } from './card-prodotto/card-prodotto.component';
   styleUrl: './pagina-prodotti.component.css',
   providers: [ProdottiService],
   encapsulation: ViewEncapsulation.Emulated,
-  //animations: [
-  //  trigger('slideInLeft', [
-  //    transition(':enter', [
-  //      style({ transform: 'translateX(-100%)', opacity: 0 }),
-  //      animate('500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 }))
-  //    ])
-  //  ]),
-  //  trigger('slideInRight', [
-  //    transition(':enter', [
-  //      style({ transform: 'translateX(100%)', opacity: 0 }),
-  //      animate('500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 }))
-  //    ])
-  //  ])
-  //]
 })
 export class PaginaProdottiComponent implements OnInit {
-  
+
+
   gruppoA: Prodotto[] = [];
   gruppoB: Prodotto[] = [];
 
-  constructor(private prodottiService: ProdottiService) { }
+  constructor(
+    private prodottiService: ProdottiService,
+    private seo: SeoService
+  ) { }
 
   ngOnInit(): void {
+    this.seo.updateMeta('prodotti');
+
     this.prodottiService.getProdotti().subscribe((prodotti) => {
       this.gruppoA = prodotti.filter(p => p.gruppo === 'gruppoA');
       this.gruppoB = prodotti.filter(p => p.gruppo === 'gruppoB');
